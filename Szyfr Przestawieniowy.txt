@@ -1,0 +1,29 @@
+Szyfr Przestawieniowy
+
+1) Pobierz tekst
+TO BE OR NOT TO BE THAT IS THE QUESTION
+
+2) Usuń białe znaki
+TOBEORNOTTOBETHATISTHEQUESTION
+
+3)Pobierz klucz
+klucz = 6
+
+4) Podziel tekst na części długości klucza
+Opcjonalnie:
+5a) Zapisz części jedna pod drugą
+TOBEOR
+NOTTOB
+ETHATI
+STHEQU
+ESTION
+
+5b) W pętli odczytuj litery na kolejnych wielokrotniściach klucza
+
+Szyfrogram powstaje poprzez spisanie liter kolumniami
+
+TNESEOOTTSBTHHI...
+
+6) Wydrukuj zaszyfrowany tekst
+
+Napisz program w dowolnym jezyku, który relaizuje szyfrowanie przestawne.
