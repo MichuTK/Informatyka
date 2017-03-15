@@ -2,22 +2,28 @@
 # -*- coding: utf-8 -*-
 
 
-def szyfruj_vigenere(tekst, klucz):
-    i = 0
-    for znak in tekst:
-        wartosc1 = ord(znak.upper()) - 64
-        wartosc2 = ord(klucz[i].upper()) - 64
-        print wartosc1, wartosc2
-        i += 1
+def szyfrVigenere(tekst, klucz):
+    szyfrogram = ""
+
+    for i in range(len(tekst)):
+        szyfrogram += chr((((ord(tekst[i]) - 65)) + (ord(klucz[i % len(klucz)]) - 65)) % 26 + 65)
+
+    print szyfrogram
 
 
 def main(args):
-    tekst = raw_input("Podaj tekst: ")
+    tekst = raw_input("Tekst do zaszyfrowania: ")
     klucz = raw_input("Podaj klucz: ")
-    print szyfruj_vigenere(tekst, klucz)
+
+    tekst = tekst.upper().replace(' ', '')
+    klucz = klucz.upper().replace(' ', '')
+
+    print tekst
+
+    szyfrVigenere(tekst, klucz)
     return 0
 
 
 if __name__ == '__main__':
     import sys
-    sys.exit(main(sys.argv))
+sys.exit(main(sys.argv))
