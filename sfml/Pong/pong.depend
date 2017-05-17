@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1493358160 source:/home/lo1sand/sfml/pong/game.cpp
+	"game.hpp"
+
+1493357971 /home/lo1sand/sfml/pong/game.hpp
+	<SFML/Graphics.hpp>
+	<SFML/System.hpp>
+	<cmath>
+	"paletka.hpp"
+
+1493204352 source:/home/lo1sand/sfml/pong/main.cpp
+	"game.hpp"
+
+1493205386 /home/lo1sand/sfml/pong/paletka.hpp
+	<SFML/Graphics.hpp>
+	<cmath>
+
+1493357812 source:/home/lo1sand/sfml/pong/paletka.cpp
+	"paletka.hpp"
+
+1494312181 source:/home/kl2ag1/gittest/sfml/Pong/game.cpp
+	"game.hpp"
+
+1494308477 /home/kl2ag1/gittest/sfml/Pong/game.hpp
+	<SFML/Graphics.hpp>
+	<SFML/System.hpp>
+	<cmath>
+	"paletka.hpp"
+	"pilka.hpp"
+
+1494308741 /home/kl2ag1/gittest/sfml/Pong/paletka.hpp
+	<SFML/Graphics.hpp>
+	<cmath>
+
+1494311305 source:/home/kl2ag1/gittest/sfml/Pong/main.cpp
+	"game.hpp"
+
+1494311695 source:/home/kl2ag1/gittest/sfml/Pong/paletka.cpp
+	"paletka.hpp"
+
+1494308980 source:/home/kl2ag1/gittest/sfml/Pong/pilka.cpp
+	"pilka.hpp"
+
+1494311806 /home/kl2ag1/gittest/sfml/Pong/pilka.hpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<cstdlib>
+	<cmath>
+	<ctime>
+

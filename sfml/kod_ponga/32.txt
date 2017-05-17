@@ -1,0 +1,5 @@
+if (pilka.getPosition().y < wrog.getPosition().y - wrog.getOrigin().y)
+	restart();
+
+if (pilka.getPosition().y > gracz.getPosition().y + gracz.getOrigin().y)
+	restart();

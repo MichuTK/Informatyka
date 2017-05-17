@@ -1,0 +1,4 @@
+bool Pilka::czyKolizja(sf::RectangleShape & pal)
+{
+	return (pal.getGlobalBounds().intersects(pilka.getGlobalBounds()));
+}

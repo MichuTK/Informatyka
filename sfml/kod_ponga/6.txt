@@ -1,0 +1,2 @@
+okno.create(sf::VideoMode(abs(szer), abs(wys), 32), "Pong", sf::Style::Close);
+okno.display();

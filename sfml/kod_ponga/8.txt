@@ -1,0 +1,18 @@
+okno.create(sf::VideoMode(abs(szer), abs(wys) 32), "Pong", sf::Style::Close);
+okno.setFramerateLimit(60);
+
+while (okno.isOpen())
+{
+	deltaT = zegar.restart().asSeconds();
+	
+	while (okno.pollEvent(event))
+	{
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+			okno.close();
+			
+		if (event.type == event.Closed)
+			okno.close();
+	}
+
+	okno.display();
+}

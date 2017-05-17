@@ -1,0 +1,7 @@
+if (pozMysz.x != pal.getPosition().x)
+{
+	if (pozMysz.x < pal.getPosition().x && pal.getPosition().x - pal.getOrigin().x >= 0)
+		pal.move(sf::Vector2f(-V * T, 0.f));
+	if (pozMysz.x > pal.getPosition().x && pal.getPosition().x + pal.getOrigin().x <= okno.getSize().x)
+		pal.move(sf::Vector2f(V * T, 0.f));
+}

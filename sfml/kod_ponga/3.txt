@@ -1,0 +1,2 @@
+Game(int szerokoscOkna, int wysokoscOkna);
+~Game();

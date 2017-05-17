@@ -1,0 +1,12 @@
+wrog.sterowanieAI(okno, deltaT, pilka.zwPoz());
+
+pilka.poruszanie(deltaT);
+pilka.kolizjaPaletka(gracz.zwPal());
+pilka.kolizjaPaletka(wrog.zwPal());
+pilka.kolizjaSciana(okno);
+pilka.Punkt(gracz.zwPal(), wrog.zwPal());
+
+		
+		
+		
+pilka.wysPilka(okno);

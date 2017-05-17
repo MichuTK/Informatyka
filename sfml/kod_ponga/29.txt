@@ -1,0 +1,6 @@
+if (pilka.getPosition().x + pilka.getOrigin().x > okno.getSize().x)
+{
+	zderzenie.play();
+	kat = -kat;
+	pilka.setPosition(okno.getSize().x - 2*r - 1.f, pilka.getPosition().y);
+}

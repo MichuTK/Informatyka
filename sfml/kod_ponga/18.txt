@@ -1,0 +1,4 @@
+sf::Vector2f rozPal(150, 30);
+
+Paletka gracz(rozPal, sf::Vector2f(okno.getSize().x / 2, okno.getSize().y - (okno.getSize().y / 10)), 400.f, sf::Color(132, 255, 38));
+Paletka wrog(rozPal, sf::Vector2f(okno.getSize().x / 2, (okno.getSize().y / 10)), 400.f, sf::Color(253, 28, 43));

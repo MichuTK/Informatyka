@@ -1,0 +1,6 @@
+srand(time(NULL));
+
+do
+{
+	kat = (rand() % 360) * 2 * pi / 360;
+} while (abs(cos(kat)) < 0.7f);

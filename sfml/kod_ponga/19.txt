@@ -1,0 +1,6 @@
+gracz.sterowanie(okno, deltaT);
+
+
+
+gracz.wys(okno);
+wrog.wys(okno);

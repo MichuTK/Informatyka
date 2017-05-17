@@ -1,0 +1,7 @@
+okno.create(sf::VideoMode(abs(szer), abs(wys), 32), "Pong", sf::Style::Close);
+okno.setFramerateLimit(60);
+	
+while (okno.isOpen())
+{
+	okno.display();
+}

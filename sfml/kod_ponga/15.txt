@@ -1,0 +1,1 @@
+pozMysz = sf::Mouse::getPosition(okno);

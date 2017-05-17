@@ -1,0 +1,5 @@
+sf::Clock zegar;
+sf::RenderWindow okno;
+sf::Event event;
+
+float deltaT;

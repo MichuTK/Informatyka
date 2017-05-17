@@ -1,0 +1,29 @@
+#include "paletka.hpp"
+
+Paletka::Paletka(sf::Vector2f rozPal, sf::Vector2f pozPal, float Vel, sf::Color kolor)
+{
+
+}
+
+Paletka::~Paletka()
+{}
+
+sf::RectangleShape Paletka::zwPal()
+{
+
+}
+
+void Paletka::wys(sf::RenderWindow & okno)
+{
+
+}
+
+void Paletka::sterowanie(sf::RenderWindow & okno, float T)
+{
+
+}
+
+void Paletka::sterowanieAI(sf::RenderWindow & okno, float T, sf::Vector2f & pilka)
+{
+
+}

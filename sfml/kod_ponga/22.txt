@@ -1,0 +1,7 @@
+sf::CircleShape pilka;
+sf::SoundBuffer buffer;
+sf::Sound zderzenie;
+sf::Vector2f srodek;
+
+float r, V, kat;
+const float pi = 3.14159f;

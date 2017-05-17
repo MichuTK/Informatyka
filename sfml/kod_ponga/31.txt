@@ -1,0 +1,8 @@
+if (czyKolizja(pal))
+{
+	zderzenie.play();
+	if(pilka.getPosition().x > pal.getPosition().x)
+		kat = pi - kat + (rand() % 20) * pi / 180;
+	else
+		kat = pi - kat - (rand() % 20) * pi / 180;
+}

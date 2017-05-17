@@ -1,0 +1,54 @@
+#include "pilka.hpp"
+
+Pilka::Pilka(sf::RenderWindow & okno, float promien, float vel, sf::Color kolor)
+{
+
+}
+
+Pilka::~Pilka()
+{}
+
+sf::Vector2f Pilka::zwPoz()
+{
+
+}
+
+void Pilka::wysPilka(sf::RenderWindow & okno)
+{
+
+}
+
+void Pilka::poruszanie(float T)
+{
+
+}
+
+void Pilka::wyzKat()
+{
+
+}
+
+void Pilka::kolizjaSciana(sf::RenderWindow & okno)
+{
+
+}
+
+void Pilka::kolizjaPaletka(sf::RectangleShape & pal)
+{
+
+}
+
+void Pilka::Punkt(sf::RectangleShape & gracz, sf::RectangleShape & wrog)
+{
+
+}
+
+void Pilka::restart()
+{
+
+}
+
+bool Pilka::czyKolizja(sf::RectangleShape & pal)
+{
+
+}

@@ -1,0 +1,14 @@
+r = abs(promien);
+V = vel;
+srodek = sf::Vector2f(okno.getSize().x / 2, okno.getSize().y / 2);
+
+pilka.setRadius(r);
+pilka.setPointCount(50);
+pilka.setFillColor(kolor);
+pilka.setOrigin(r, r);
+pilka.setPosition(srodek);
+
+buffer.loadFromFile("resources/ball.wav");
+zderzenie.setBuffer(buffer);
+
+wyzKat();

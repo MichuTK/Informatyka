@@ -1,0 +1,4 @@
+pal.setSize(roz);
+pal.setPosition(poz);
+pal.setOrigin(sf::Vector2f(roz.x / 2, roz.y / 2));
+pal.setFillColor(kolor);

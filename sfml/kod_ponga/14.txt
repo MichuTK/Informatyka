@@ -1,0 +1,9 @@
+sf::RectangleShape Paletka::zwPal()
+{
+	return pal;
+}
+
+void Paletka::wys(sf::RenderWindow & okno)
+{
+	okno.draw(pal);
+}

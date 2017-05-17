@@ -1,0 +1,14 @@
+sf::Vector2f Pilka::zwPoz()
+{
+	return pilka.getPosition();
+}
+
+void Pilka::wysPilka(sf::RenderWindow & okno)
+{
+	okno.draw(pilka);
+}
+
+void Pilka::poruszanie(float T)
+{
+	pilka.move(sf::Vector2f(sin(kat) * V * T, cos(kat) * V * T));
+}

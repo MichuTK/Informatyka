@@ -1,0 +1,5 @@
+roz.x = abs(rozPal.x);
+roz.y = abs(rozPal.y);
+poz.x = abs(pozPal.x);
+poz.y = abs(pozPal.y);
+V = Vel;

@@ -1,0 +1,13 @@
+#include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+#include <cstdlib>
+#include <cmath>
+#include <ctime>
+
+class Pilka
+{
+private:
+
+public:
+
+};
