@@ -25,7 +25,8 @@ int main(int argc, char **argv)
         cout << "Mamy tyle samo lat!" << endl;
     }
         
-    for(int )
+    //TODO
+    //Wyświetlanie liczb parzystych 0-100
     
     
     
