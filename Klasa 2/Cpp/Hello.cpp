@@ -24,12 +24,14 @@ int main(int argc, char **argv)
     else{
         cout << "Mamy tyle samo lat!" << endl;
     }
-        
-    //TODO
-    //Wyświetlanie liczb parzystych 0-100
+            
+    cout << "Liczby parzyste (0-100): ";
+    for(int i = 0; i < 101; i += 2){
+		cout << i;
+		if(i < 100) cout << ", ";
+		else cout << "." << endl;
+	}
     
-    
-    
-	return 0;
+   	return 0;
 }
 
