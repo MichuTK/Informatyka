@@ -4,7 +4,7 @@
 rok = 2017
 data_powstania = 1991
 
-def main(args):    
+def main(args):
     imie = input("Podaj imie: ")
     print ("Witaj", imie)
     wiek = int(input("Ile masz lat? "))
@@ -15,7 +15,13 @@ def main(args):
     elif wiek < (rok-data_powstania):
         print("Jestem starszy!")
     else:
-        print("Mamy tyle samo lat!")    
+        print("Mamy tyle samo lat!")
+        
+    print ("Liczby parzyste (0-100): ")
+    liczba = 0
+    while liczba < 101:
+        print (liczba)
+        liczba += 2
     
     return 0
 
