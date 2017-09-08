@@ -4,6 +4,13 @@
 rok = 2017
 data_powstania = 1991
 
+def parzyste(zakres):
+    ile = list(range(0, zakres+1, 2))
+    print("Liczby parzyste: ")
+    print(ile)
+    return len(ile)
+    
+    
 def main(args):
     imie = input("Podaj imie: ")
     print ("Witaj", imie)
@@ -17,11 +24,8 @@ def main(args):
     else:
         print("Mamy tyle samo lat!")
         
-    print ("Liczby parzyste (0-100): ")
-    liczba = 0
-    while liczba < 101:
-        print (liczba)
-        liczba += 2
+    zakres = int(input("Podaj zakres: "))
+    print("Ilosc liczb parzystych: ", parzyste(zakres))
     
     return 0
 

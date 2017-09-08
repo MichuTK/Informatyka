@@ -2,10 +2,20 @@
 
 using namespace std;
 
+int parzyste(int zakres){
+    int i = 0;
+    cout << "Liczby parzyste (0-" << zakres << "): ";
+    for(i = 0; i <= zakres; i += 2){
+        cout << i << ", ";
+    }
+    cout << endl;
+    return i/2;
+}
+
 int main(int argc, char **argv)
 {
     string imie;
-    int wiek, rok = 2017;
+    int wiek, zakres, rok = 2017;
     const int data_powstania = 1983;
     int wiek_cpp = rok - data_powstania;
     
@@ -24,13 +34,10 @@ int main(int argc, char **argv)
     else{
         cout << "Mamy tyle samo lat!" << endl;
     }
-            
-    cout << "Liczby parzyste (0-100): ";
-    for(int i = 0; i < 101; i += 2){
-		cout << i;
-		if(i < 100) cout << ", ";
-		else cout << "." << endl;
-	}
+    
+    cout << "Podaj zakres: ";
+    cin >> zakres;
+    cout << "Ilosc liczb parzystych: " << parzyste(zakres) << endl;
     
    	return 0;
 }
