@@ -39,6 +39,12 @@ int main(int argc, char **argv)
     cin >> zakres;
     cout << "Ilosc liczb parzystych: " << parzyste(zakres) << endl;
     
+    /* 
+     * TO DO
+     * funkcja liczby nieprzyste
+     * sito erastestonesa
+     */
+    
    	return 0;
 }
 
