@@ -2,8 +2,18 @@
 
 using namespace std;
 
+int nieparzyste(int zakres){
+    int i;
+    cout << "Liczby nieparzyste (0-" << zakres << "): ";
+    for(i = 1; i <= zakres; i += 2){
+        cout << i << ", ";
+    }
+    cout << endl;
+    return i/2;
+}
+
 int parzyste(int zakres){
-    int i = 0;
+    int i;
     cout << "Liczby parzyste (0-" << zakres << "): ";
     for(i = 0; i <= zakres; i += 2){
         cout << i << ", ";
@@ -38,11 +48,12 @@ int main(int argc, char **argv)
     cout << "Podaj zakres: ";
     cin >> zakres;
     cout << "Ilosc liczb parzystych: " << parzyste(zakres) << endl;
+    cout << "Ilosc liczb nieparzystych: " << nieparzyste(zakres) << endl;
     
     /* 
      * TO DO
      * funkcja liczby nieprzyste
-     * sito erastestonesa
+     * Sito Eratostenesa
      */
     
    	return 0;
