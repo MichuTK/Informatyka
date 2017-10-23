@@ -41,9 +41,23 @@ def kw_d(cur):
         SELECT Imie, Nazwisko, Ocena
         FROM tbUczniowie, tbOceny
         WHERE tbOceny.UczenID = tbUczniowie.IDUcznia
-        AND tbUczniowie.Nazwisko = Nowak
+        AND tbUczniowie.Nazwisko = 'Nowak'
     """)
-
+    
+    wyniki(cur)
+    
+def kw_e(cur):
+    cur.execute("""
+        SELECT AVG(tbOceny.Ocena)
+        FROM tbOceny, tbPrzedmioty
+        WHERE tbOceny.PrzedmiotID = tbPrzedmioty.IDPrzedmiotu
+        AND tbPrzedmioty.Przedmiot = 'fizyka'
+        AND tbOceny.Datad > '2012-10-01'
+        AND tbOceny.Datad < '2012-10-31'
+        
+    """)
+    
+    wyniki(cur)
 
 def main(args):
     
@@ -51,7 +65,7 @@ def main(args):
     cur = con.cursor()
     con.row_factory = sqlite3.Row
     
-    kw_d(cur)
+    kw_e(cur)
     
     return 0
 
