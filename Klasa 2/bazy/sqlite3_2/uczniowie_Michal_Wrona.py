@@ -15,7 +15,6 @@ def kw_a(cur):
         WHERE tbUczniowie.KlasaID = tbKlasy.IDKlasy
         AND tbKlasy.Klasa = '1A'
     """)
-    
     wyniki(cur)
         
 def kw_b(cur):
@@ -23,7 +22,6 @@ def kw_b(cur):
         SELECT MAX(EgzHum)
         FROM tbUczniowie
     """)
-    
     wyniki(cur)
     
 def kw_c(cur):
@@ -33,7 +31,6 @@ def kw_c(cur):
         WHERE tbUczniowie.KlasaID = tbKlasy.IDKlasy
         AND tbKlasy.Klasa = '1A'
     """)
-
     wyniki(cur)
     
 def kw_d(cur):
@@ -43,7 +40,6 @@ def kw_d(cur):
         WHERE tbOceny.UczenID = tbUczniowie.IDUcznia
         AND tbUczniowie.Nazwisko = 'Nowak'
     """)
-    
     wyniki(cur)
     
 def kw_e(cur):
@@ -54,19 +50,35 @@ def kw_e(cur):
         AND tbPrzedmioty.Przedmiot = 'fizyka'
         AND tbOceny.Datad > '2012-10-01'
         AND tbOceny.Datad < '2012-10-31'
-        
     """)
-    
     wyniki(cur)
 
-def main(args):
+def dodaj(cur):
+    cur.execute("""
+        INSERT INTO tbklasy
+        VALUES (?, ?, ?, ?)
+    """, [None, '3C', 2015, 2017])
     
+def aktu(cur):
+    cur.execute("""
+        UPDATE tbklasy
+        SET klasa = ?
+        WHERE idklasy = ?
+    """, ['3D', 13])
+    
+def usun(cur):
+    cur.execute('DELETE FROM tbklasy WHERE klasa = ? AND roknaboru = ?', ['3B', 2015])
+
+def main(args):
     con = sqlite3.connect('szkola.db')
-    cur = con.cursor()
+    cur = con.cursor() #utworzenie kursora
     con.row_factory = sqlite3.Row
     
-    kw_e(cur)
-    
+    #dodaj(cur)
+    #aktu(cur)
+    usun(cur)
+    con.commit()
+    wyniki(cur.execute('SELECT * FROM tbklasy'))
     return 0
 
 if __name__ == '__main__':
