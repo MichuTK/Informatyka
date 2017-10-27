@@ -44,6 +44,7 @@ def kw_d(cur):
     
 def kw_e(cur):
     cur.execute("""
+<<<<<<< HEAD
         SELECT AVG(Ocena)
         FROM tbOceny
         WHERE PrzedmiotID = 6
@@ -82,14 +83,40 @@ def aktualizuj(cur):
 
 def usun(cur):
     cur.execute('DELETE FROM tbKlasy WHERE klasa = ? AND roknaboru = ?', ['3B', 2015])
+=======
+        SELECT AVG(tbOceny.Ocena)
+        FROM tbOceny, tbPrzedmioty
+        WHERE tbOceny.PrzedmiotID = tbPrzedmioty.IDPrzedmiotu
+        AND tbPrzedmioty.Przedmiot = 'fizyka'
+        AND tbOceny.Datad > '2012-10-01'
+        AND tbOceny.Datad < '2012-10-31'
+    """)
+    wyniki(cur)
+>>>>>>> 692b0129102215b3c696b02c6795707ab6fbcf07
+
+def dodaj(cur):
+    cur.execute("""
+        INSERT INTO tbklasy
+        VALUES (?, ?, ?, ?)
+    """, [None, '3C', 2015, 2017])
+    
+def aktu(cur):
+    cur.execute("""
+        UPDATE tbklasy
+        SET klasa = ?
+        WHERE idklasy = ?
+    """, ['3D', 13])
+    
+def usun(cur):
+    cur.execute('DELETE FROM tbklasy WHERE klasa = ? AND roknaboru = ?', ['3B', 2015])
 
 def main(args):
-    
     con = sqlite3.connect('szkola.db')
-    cur = con.cursor()
+    cur = con.cursor() #utworzenie kursora
     con.row_factory = sqlite3.Row
     
     #dodaj(cur)
+<<<<<<< HEAD
     #aktualizuj(cur)
     #usun(cur)
     kw_f(cur)
@@ -97,6 +124,12 @@ def main(args):
     #wyniki(cur.execute('SELECT * FROM tbKlasy'))
     wyniki(cur.execute("""SELECT * FROM tbUczniowie WHERE Imie = 'Paulina' AND Nazwisko = 'Dziedzic'"""))
     
+=======
+    #aktu(cur)
+    usun(cur)
+    con.commit()
+    wyniki(cur.execute('SELECT * FROM tbklasy'))
+>>>>>>> 692b0129102215b3c696b02c6795707ab6fbcf07
     return 0
 
 if __name__ == '__main__':
