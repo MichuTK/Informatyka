@@ -57,9 +57,9 @@ def kw_f(cur):
     cur.execute("""
         UPDATE tbUczniowie
         SET EgzJez = ?
-        WHERE Imie = 'Paulina'
-        AND Nazwisko = 'Dziedzic'
-    """, [35])
+        WHERE Imie = ?
+        AND Nazwisko = ?
+    """, [35, 'Paulina', 'Dziedzic'])
     
 def kw_g(cur):
     cur.execute("""
