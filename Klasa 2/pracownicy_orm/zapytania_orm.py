@@ -101,13 +101,13 @@ def kwerenda_h():
 
 def kwerenda_i():
     """Kwerenda liczy liczbę pracowników zatrudnionych w każdym dziale"""
-    query = (
-            .select(fn.count(Pracownik.id).alias('ilu'))
-            .join(Premia)
+    query = (Pracownik
+            .select(fn.count(Pracownik.id).alias('ilu'), Dzial.siedziba)
+            .join(Dzial)
             .group_by(Dzial.siedziba)
             )
 
     for obj in query:
-        print(obj.imie, obj.nazwisko, obj.stanowisko.id, obj.id_dzial.siedziba)
+        print(obj.ilu, obj.id_dzial.siedziba)
 
 kwerenda_i()
