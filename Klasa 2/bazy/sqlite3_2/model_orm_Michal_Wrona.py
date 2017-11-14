@@ -35,17 +35,18 @@ class Uczen(BazaModel):
 class Ocena(BazaModel):
     datad = DateField()
     uczen_id = ForeignKeyField(Uczen, related_name='Ocena')
-    przedmiot_id = ForeignKeyField(Przedmiot, related_name='O')
+    przedmiot_id = ForeignKeyField(Przedmiot, related_name='Ocena')
     ocena = DecimalField(null=False)
 
 baza.connect()  # nawiązujemy połączenie z bazą
 
 def kwerenda_a():
     query = (Uczen
-             .select(Uczen.imie, Uczen.nazwisko)
+             .select(Uczen.imie, Uczen.nazwisko, Klasa.nazwa)
+             .join(Klasa)
              )
 
     for obj in query:
-        print(obj.imie, obj.nazwisko)
+        print(obj.imie, obj.nazwisko, obj.nazwa)
 
 kwerenda_a()
