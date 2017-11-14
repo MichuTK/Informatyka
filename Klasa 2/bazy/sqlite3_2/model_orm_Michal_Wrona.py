@@ -13,33 +13,31 @@ class BazaModel(Model):  # klasa bazowa
 
 
 class Klasa(BazaModel):
-    id = IntegerField(primary_key=True)
-    klasa = CharField(null=False)
+    nazwa = CharField(null=False)
     rok_naboru = IntegerField(null=False)
     rok_matury = IntegerField(null=False)
+    
+class Przedmiot(BazaModel):
+    nazwa = CharField(null=False)
+    imien = CharField(null=False)
+    nazwiskon = CharField(null=False)
+    plecn = IntegerField(null=False)
 
 class Ocena(BazaModel):
-    id = IntegerField(primary_key=True)
-    data = DateField()
-    uczen_id = ForeignKeyField(Uczen, related_name='Ocena')
-    przedmiot_id = IntegerField(null=False)
+    datad = DateField()
+    uczen_id = ForeignKeyField(Uczen, related_name='id')
+    przedmiot_id = ForeignKeyField(Przedmiot, related_name='id')
     ocena = DecimalField(null=False)
 
 class Uczen(BazaModel):
-    id = IntegerField(primary_key=True)
     imie = CharField(null=False)
     nazwisko = CharField(null=False)
     plec = IntegerField(null=False)
-    klasa_id = IntegerField(null=False)
-    egz_hum = DecimalField(null=False)
-    egz_mat = DecimalField(null=False)
-    egz_jez = DecimalField(null=False)
+    klasa_id = ForeignKeyField(Klasa, related_name='id')
+    egzhum = DecimalField(decimal_places=2, default=0, null=False)
+    egzmat = DecimalField(decimal_places=2, default=0, null=False)
+    egzjez = DecimalField(decimal_places=2, default=0, null=False)
 
-class Przedmiot(BazaModel):
-    id = IntegerField(primary_key=True)
-    przedmiot = CharField(null=False)
-    naucz = CharField(null=False)
-    imienaucz = CharField(null=False)
-    plec = IntegerField(null=False)
+
 
 baza.connect()  # nawiązujemy połączenie z bazą
