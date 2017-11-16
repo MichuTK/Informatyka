@@ -27,15 +27,15 @@ class Uczen(BazaModel):
     imie = CharField(null=False)
     nazwisko = CharField(null=False)
     plec = IntegerField(null=False)
-    klasa_id = ForeignKeyField(Klasa, related_name='Uczen')
+    klasa_id = ForeignKeyField(Klasa, related_name='klasa_id')
     egzhum = DecimalField(decimal_places=2, default=0, null=False)
     egzmat = DecimalField(decimal_places=2, default=0, null=False)
     egzjez = DecimalField(decimal_places=2, default=0, null=False)
 
 class Ocena(BazaModel):
     datad = DateField()
-    uczen_id = ForeignKeyField(Uczen, related_name='Ocena')
-    przedmiot_id = ForeignKeyField(Przedmiot, related_name='Ocena')
+    uczen_id = ForeignKeyField(Uczen, related_name='uczen_id')
+    przedmiot_id = ForeignKeyField(Przedmiot, related_name='przedmiot_id')
     ocena = DecimalField(null=False)
 
 baza.connect()  # nawiązujemy połączenie z bazą
@@ -44,9 +44,10 @@ def kwerenda_a():
     query = (Uczen
              .select(Uczen.imie, Uczen.nazwisko, Klasa.nazwa)
              .join(Klasa)
+             .where(Klasa.nazwa=='1A')
              )
 
     for obj in query:
         print(obj.imie, obj.nazwisko, obj.nazwa)
 
-kwerenda_a()
+
