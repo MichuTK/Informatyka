@@ -5,8 +5,14 @@
   </head>
 <body>
   <h1>Quiz Python</h1>
-  <p>Witaj w Quizie</p>
-  <!-- formularz z quizem -->
+  <p>Witaj w quizie</p>
+      <!-- wyświetlamy komunikaty z funkcji flash -->
+  <p>
+    {% for message in get_flashed_messages() %}
+      {{ message }}
+    {% endfor %}
+  </p>
+      <!-- formularz z quizem -->
     <form method="POST">
         <!-- przeglądamy listę pytań -->
         {% for p in pytania %}
@@ -31,5 +37,7 @@
         <!-- przycisk wysyłający wypełniony formularz -->
         <button type="submit">Sprawdź odpowiedzi</button>
     </form>
+
 </body>
 </html>
+
