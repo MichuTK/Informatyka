@@ -10,6 +10,8 @@
     <li>
       <!-- wypisujemy pytanie -->
       {{ p.pytanie }}
+      <a href="{{ url_for('edytuj', pid=p.id ) }}" class="btn btn-default">Edytuj</a>
+      <a href="{{ url_for('usun', pid=p.id ) }}" class="btn btn-danger">Usuń</a>
     </li>
   {% endfor %}
   </ol>

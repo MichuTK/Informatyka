@@ -88,3 +88,54 @@ def dodaj():
         flash_errors(form)
 
     return render_template("dodaj.html", form=form, radio=list(form.odpok))
+
+def get_or_404(pid):
+    """Pobranie i zwrócenie obiektu z bazy lub wywołanie szablonu 404.html"""
+    try:
+        p = Pytanie.select().annotate(Odpowiedz).where(Pytanie.id == pid).get()
+        return p
+    except Pytanie.DoesNotExist:
+        abort(404)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    """Zwrócenie szablonu 404.html w przypadku nie odnalezienia strony"""
+    return render_template('404.html'), 404
+
+
+@app.route('/edytuj/<int:pid>', methods=['GET', 'POST'])
+def edytuj(pid):
+    """Edycja pytania o identyfikatorze pid i odpowiedzi"""
+    p = get_or_404(pid)
+    form = DodajForm()
+
+    if form.validate_on_submit():
+        odp = form.odpowiedzi.data
+        p.pytanie = form.pytanie.data
+        p.odpok = odp[int(form.odpok.data)]
+        p.save()
+        for i, o in enumerate(p.odpowiedzi):
+            o.odpowiedz = odp[i]
+            o.save()
+        flash("Zaktualizowano pytanie: {}".format(form.pytanie.data))
+        return redirect(url_for("lista"))
+    elif request.method == 'POST':
+        flash_errors(form)
+
+    for i in range(3):
+        if p.odpok == p.odpowiedzi[i].odpowiedz:
+            p.odpok = i
+            break
+    form = DodajForm(obj=p)
+    return render_template("edytuj.html", form=form, radio=list(form.odpok))
+
+@app.route('/usun/<int:pid>', methods=['GET', 'POST'])
+def usun(pid):
+    """Usunięcie pytania o identyfikatorze pid"""
+    p = get_or_404(pid)
+    if request.method == 'POST':
+        flash('Usunięto pytanie {0}'.format(p.pytanie), 'sukces')
+        p.delete_instance(recursive=True)
+        return redirect(url_for('index'))
+    return render_template("pytanie_usun.html", pytanie=p)
