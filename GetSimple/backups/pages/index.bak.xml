@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Tue, 12 Dec 2017 12:15:31 +0100</pubDate><title><![CDATA[Witamy w CMS]]></title><url><![CDATA[index]]></url><meta><![CDATA[getsimple, easy, content management system]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Strona główna]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;p&gt;Podstawowy sposób wprowadzania i formatowania tekstu to użycie edytora JS.&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;http://lo1.sandomierz.pl&quot;&gt;I LO Collegium Gostomianum&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;1. GetSimple CMS&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet laoreet est, nec sodales ante. Aenean ac posuere nulla. Phasellus consectetur tempor urna, vel porta est laoreet vitae. Integer sollicitudin pharetra ipsum bibendum molestie. Phasellus fringilla eget nisl sollicitudin placerat. Etiam dignissim augue nibh, ut faucibus ante congue nec. Praesent dictum rutrum nisl at cursus.&lt;/p&gt;
+
+&lt;p&gt;Morbi leo tellus, mollis ac rhoncus vitae, fermentum eget arcu. Mauris in blandit massa. Aenean eget arcu eu enim imperdiet aliquet eget euismod mauris. Nam blandit enim in nibh molestie finibus. Nunc enim quam, posuere id viverra non, rhoncus efficitur velit. Donec egestas eget lorem id eleifend. Maecenas semper, nunc eget finibus consectetur, eros lacus gravida libero, a hendrerit leo odio et elit. Fusce in odio tellus. In ornare accumsan volutpat. Aenean elementum, orci eget aliquet sollicitudin, libero enim gravida mi, sit amet hendrerit mauris velit eget metus. Pellentesque est tortor, vestibulum eget velit at, consectetur cursus nibh. Quisque condimentum magna at tellus molestie euismod. Donec ut orci pretium, vestibulum lectus eu, laoreet ante. Mauris efficitur vel dolor ac dapibus.&lt;/p&gt;
+
+&lt;h3&gt;Nagłówek&lt;/h3&gt;
+
+&lt;ol&gt;
+	&lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+	&lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+	&lt;li&gt;Donec ut est risus, placerat venenatis augue&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;A blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut est risus, placerat venenatis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;/blockquote&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[uczen]]></author></item>
