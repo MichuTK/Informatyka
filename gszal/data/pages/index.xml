@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Tue, 19 Dec 2017 12:20:00 +0100</pubDate><title><![CDATA[Witamy]]></title><url><![CDATA[index]]></url><meta><![CDATA[getsimple, easy, content management system]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Witamy]]></menu><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;h2&gt;Witaj na stronie klasy 3A&lt;/h2&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Lista uczniów&lt;/a&gt;
+
+		&lt;ul&gt;
+			&lt;li&gt;Grupa 1&lt;/li&gt;
+			&lt;li&gt;Grupa 2&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A to my (kliknij, żeby zobaczyć powiększone zdjęcie):&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://localhost/~kl3ag1/gszal/data/uploads/klasa/klasa.jpg&quot; style=&quot;width: 300px; height: 217px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Znajdź nas na &lt;a href=&quot;https://plus.google.com/discover?hl=pl&quot;&gt;Google+&lt;/a&gt;&lt;/p&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[uczen]]></author><menuOrder><![CDATA[0]]></menuOrder></item>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Tue, 19 Dec 2017 12:30:01 +0100</pubDate><title><![CDATA[Lista]]></title><url><![CDATA[lista]]></url><meta><![CDATA[lista]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Lista]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[index]]></parent><content><![CDATA[&lt;div id=&quot;page-content&quot;&gt;
+	&lt;div class=&quot;page-text&quot;&gt;
+		&lt;h2&gt;Klasa 3A&lt;/h2&gt;
+
+		&lt;p&gt;Nachylenie profilowe: &lt;strong&gt;ścisłe&lt;/strong&gt;&lt;br /&gt;
+			Wych. mgr Bożena Myl-Ciszkiewicz – &lt;strong&gt;rok szk. 2013/14&lt;/strong&gt;&lt;/p&gt;
+
+		&lt;ol&gt;
+			&lt;li&gt;Chmielewska Katarzyna&lt;/li&gt;
+			&lt;li&gt;Hebda Anna&lt;/li&gt;
+			&lt;li&gt;Korga Aleksy&lt;/li&gt;
+			&lt;li&gt;Korol Dominik&lt;/li&gt;
+			&lt;li&gt;Kurzępa Kamil&lt;/li&gt;
+			&lt;li&gt;Kusal Zuzanna&lt;/li&gt;
+			&lt;li&gt;Lorens Aleksandra&lt;/li&gt;
+			&lt;li&gt;Lubański Michał&lt;/li&gt;
+			&lt;li&gt;Łabudziński Maciej&lt;/li&gt;
+			&lt;li&gt;Murszewska Anna&lt;/li&gt;
+			&lt;li&gt;Palkowska Hanna&lt;/li&gt;
+			&lt;li&gt;Pietruszka Karol&lt;/li&gt;
+			&lt;li&gt;Rdzonek Martyna&lt;/li&gt;
+			&lt;li&gt;Rękas Paweł&lt;/li&gt;
+			&lt;li&gt;Sierżęga Jakub&lt;/li&gt;
+			&lt;li&gt;Skorupski Adam&lt;/li&gt;
+			&lt;li&gt;Stępień Agnieszka&lt;/li&gt;
+			&lt;li&gt;Sudoł Maciej&lt;/li&gt;
+			&lt;li&gt;Ufniarz Diana&lt;/li&gt;
+			&lt;li&gt;Wamej Paweł&lt;/li&gt;
+			&lt;li&gt;Wrona Sylwia&lt;/li&gt;
+			&lt;li&gt;Wyrazik Artur&lt;/li&gt;
+			&lt;li&gt;Zeliaś Krzysztof&lt;/li&gt;
+			&lt;li&gt;Zioło Cezary&lt;/li&gt;
+			&lt;li&gt;Żardecka Agata&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[uczen]]></author></item>
