@@ -49,7 +49,7 @@ void getSamochody(samochod t[], int n){
 
 void drukujSamochody(samochod t[], int n){
     for(int i=0; i < n; i++){
-        cout << setw(25) << left << "Marka: " << setfill('.') << t[i].marka << endl;
+        cout << setw(25) << setfill('.') << left << "Marka: " << t[i].marka << endl;
         cout << setw(25) << left << "Model: " << setfill('.') << t[i].model << endl;
         cout << setw(25) << left <<  "Rok produkcji: " << setfill('.') << t[i].rok << endl;
         cout << setw(25) << left <<  "Przebieg: " << setfill('.') << t[i].przebieg << endl << endl;
@@ -76,7 +76,7 @@ int main(int argc, char **argv)
     //~cout << "Podaj przebieg: ";
     //~cin >> auto1.przebieg;
     
-    int n = 3;
+    int n = 1;
     samochod tb[n];
     getSamochody(tb, n);
     
