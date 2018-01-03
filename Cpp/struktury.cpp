@@ -36,6 +36,7 @@ void wyswietlDane(samochod o){
 
 void getSamochody(samochod t[], int n){
     for(int i=0; i < n; i++){
+        cout << endl;
         cout << "Podaj marke: ";
         cin >> t[i].marka;
         cout << "Podaj model: ";
@@ -49,10 +50,11 @@ void getSamochody(samochod t[], int n){
 
 void drukujSamochody(samochod t[], int n){
     for(int i=0; i < n; i++){
+		cout << endl;
         cout << setw(25) << setfill('.') << left << "Marka: " << t[i].marka << endl;
         cout << setw(25) << left << "Model: " << setfill('.') << t[i].model << endl;
         cout << setw(25) << left <<  "Rok produkcji: " << setfill('.') << t[i].rok << endl;
-        cout << setw(25) << left <<  "Przebieg: " << setfill('.') << t[i].przebieg << endl << endl;
+        cout << setw(25) << left <<  "Przebieg: " << setfill('.') << t[i].przebieg << endl;
     }
 }
 int main(int argc, char **argv)
@@ -65,7 +67,7 @@ int main(int argc, char **argv)
     //~cin >> uczen1.nazwisko;
     //~cout << "Podaj wiek: ";
     //~cin >> uczen1.wiek;
-    
+
     //~samochod auto1;
     //~cout << "Podaj marke: ";
     //~cin >> auto1.marka;
@@ -75,13 +77,14 @@ int main(int argc, char **argv)
     //~cin >> auto1.rok;
     //~cout << "Podaj przebieg: ";
     //~cin >> auto1.przebieg;
-    
-    int n = 1;
+
+    int n;
+    cout << "Ile samochodow chcesz wprowadzic? "; cin >> n;
     samochod tb[n];
     getSamochody(tb, n);
-    
+
     drukujSamochody(tb, n);
-    
+
 	return 0;
 }
 
