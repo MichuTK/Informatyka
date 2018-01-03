@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Fri, 15 Dec 2017 07:43:59 +0100</pubDate><title><![CDATA[Lista CMS-ów]]></title><url><![CDATA[lista-cms]]></url><meta><![CDATA[cms]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Lista CMS-ów]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[index]]></parent><content><![CDATA[&lt;p&gt;Najpopularniejsze CMS-y:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;joomla&lt;/li&gt;
+	&lt;li&gt;Wordpres&lt;/li&gt;
+	&lt;li&gt;GetSimple&lt;/li&gt;
+&lt;/ul&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[uczen]]></author></item>

@@ -48,15 +48,24 @@
         <div class="col-md-8">
           <div class="form-group">
             <label for="liczba ">Liczba1</label>
-            <input class="form-control" ondragover=""type="text" name="liczba1" id="liczba1" value="">
+            <input class="form-control" ondragover="" type="text" name="liczba1" id="liczba1" value="">
             <p class="help-block">Wpisz liczbę całkowitą.</p>
             <label for="liczba2">Liczba 2</label>
             <input class="form-control" ondragover=""type="text" name="liczba2" id="liczba2" value="">
             <p class="help-block">Wpisz liczbę całkowitą.</p>
-            <button class="btn btn-primary" type="button" name="dodaj" onclick="dodaj()">Dodaj</button>
+            <div class="card">
+              <div class="card-body">
+                <p id="wynik">Wynik</p>
+              </div>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-primary" type="button" name="dodaj" onclick="dodaj()">Dodaj</button>
+              <button class="btn btn-primary" type="button" name="odejmij" onclick="odejmij()">Odejmij</button>
+              <button class="btn btn-primary" type="button" name="mnoz" onclick="mnoz()">Mnóż</button>
+              <button class="btn btn-primary" type="button" name="dziel" onclick="dziel()">Dziel</button>
+            </div>
             <hr>
           </div>
-
         </div>
       </div>
     </div>
@@ -85,9 +94,28 @@
 
     <script type="text/javascript">
       function dodaj(){
-        liczba1 = document.getElementById('liczba1').text;
-        liczba2 = document.getElementById('liczba2').text;
-        alert("Suma " + (liczba1 + liczba2));
+        liczba1 = parseInt(document.getElementById('liczba1').value);
+        liczba2 = parseInt(document.getElementById('liczba2').value);
+        //alert("Suma " + (liczba1 + liczba2));
+        document.getElementById('wynik').innerHTML = liczba1 + liczba2;
+      }
+      function odejmij(){
+        liczba1 = parseInt(document.getElementById('liczba1').value);
+        liczba2 = parseInt(document.getElementById('liczba2').value);
+        //alert("Suma " + (liczba1 + liczba2));
+        document.getElementById('wynik').innerHTML = liczba1 - liczba2;
+      }
+      function mnoz(){
+        liczba1 = parseInt(document.getElementById('liczba1').value);
+        liczba2 = parseInt(document.getElementById('liczba2').value);
+        //alert("Suma " + (liczba1 + liczba2));
+        document.getElementById('wynik').innerHTML = liczba1 * liczba2;
+      }
+      function dziel(){
+        liczba1 = parseInt(document.getElementById('liczba1').value);
+        liczba2 = parseInt(document.getElementById('liczba2').value);
+        //alert("Suma " + (liczba1 + liczba2));
+        document.getElementById('wynik').innerHTML = liczba1 / liczba2;
       }
     </script>
   </body>

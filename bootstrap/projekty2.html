@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid text-center">
+      <div class="container">
+        <h1>Strona o Bootstrapie!</h1>
+        <p>Podstawy - projektowanie.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>Układ siatkowy</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href=".">Strona główna</a>
+            </li>
+            <li class="list-group-item">
+              <a href="omnie.html">Coś o mnie</a>
+            </li>
+            <li class="list-group-item">
+              <a href="projekty.html">Projekty</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-8">
+          <div class="form-group">
+            <label for="liczba ">Liczba1</label>
+            <input class="form-control" ondragover="" type="text" name="liczba1" id="liczba1" value="">
+            <p class="help-block">Wpisz liczbę całkowitą.</p>
+            <label for="liczba2">Liczba 2</label>
+            <input class="form-control" ondragover=""type="text" name="liczba2" id="liczba2" value="">
+            <p class="help-block">Wpisz liczbę całkowitą.</p>
+            <div class="card">
+              <div class="card-body">
+                <p id="wynik">Wynik</p>
+              </div>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-primary" type="button" id="dodaj">Dodaj</button>
+              <button class="btn btn-primary" type="button" id="odejmij">Odejmij</button>
+              <button class="btn btn-primary" type="button" id="mnoz">Mnóż</button>
+              <button class="btn btn-primary" type="button" id="dziel">Dziel</button>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 bg-secondary">
+          <p class="text-light text-center">&copy; by webDesign</p>
+        </div>
+        <div class="col-md-4 bg-secondary">
+          <p class="text-light text-center">Zob. również: <a href="https://www.w3schools.com">W3Schools</a></p>
+        </div>
+        <div class="col-md-4 bg-secondary">
+          <p class="text-light text-center">Aktualizacja: 05.12.2017</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#dodaj").click(function(){
+          $("#wynik").text($("#liczba1").val() + $("#liczba2").val());
+        });
+      });
+    </script>
+  </body>
+</html>
