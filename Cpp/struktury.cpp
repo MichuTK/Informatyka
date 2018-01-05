@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <fstream>
 
 using namespace std;
 
@@ -18,7 +19,6 @@ struct samochod {
     char marka[40];
     char model[40];
     int rok;
-    int przebieg;
 };
 
 /*void wyswietlDane(osoba o){
@@ -31,7 +31,6 @@ void wyswietlDane(samochod o){
     cout << setw(25) << left << "Marka: " << setfill('.') << o.marka << endl;
     cout << setw(25) << left << "Model: " << setfill('.') << o.model << endl;
     cout << setw(25) << left <<  "Rok produkcji: " << setfill('.') << o.rok << endl;
-    cout << setw(25) << left <<  "Przebieg: " << setfill('.') << o.przebieg << endl;
 }
 
 void getSamochody(samochod t[], int n){
@@ -43,8 +42,6 @@ void getSamochody(samochod t[], int n){
         cin >> t[i].model;
         cout << "Podaj rok produkcji: ";
         cin >> t[i].rok;
-        cout << "Podaj przebieg: ";
-        cin >> t[i].przebieg;
     }
 }
 
@@ -54,9 +51,36 @@ void drukujSamochody(samochod t[], int n){
         cout << setw(25) << setfill('.') << left << "Marka: " << t[i].marka << endl;
         cout << setw(25) << setfill('.') << left << "Model: " << t[i].model << endl;
         cout << setw(25) << setfill('.') << left << "Rok produkcji: " << t[i].rok << endl;
-        cout << setw(25) << setfill('.') << left << "Przebieg: " << t[i].przebieg << endl;
     }
 }
+
+void zapiszDane(samochod t[], int n){
+    ofstream plik("samochody.txt", ios::app);
+    if(!plik.is_open()){
+        cout << "Błąd otwarcia pliku!" << endl;
+    } else {
+        for(int i=0; i < n; i++){
+            cout << t[i].marka << ", " << t[i].model << ", " << t[i].rok << endl;
+            plik << t[i].marka << ", " << t[i].model << ", " << t[i].rok << endl;
+        }
+    }
+}
+
+int czytajDane(samochod t[]){
+    string linia;
+    ifstream plik("samochody.txt");
+    int i = 0;
+    if(plik.is_open()){
+        while(getline(plik, linia)){
+            cout << linia << endl;
+            i++;
+        }
+    } else {
+        cout << "Błąd otwarcia pliku!" << endl;
+    }
+    return i;
+}
+
 int main(int argc, char **argv)
 {
 
@@ -81,9 +105,10 @@ int main(int argc, char **argv)
     int n;
     cout << "Ile samochodow chcesz wprowadzic? "; cin >> n;
     samochod tb[n];
-    getSamochody(tb, n);
-
-    drukujSamochody(tb, n);
+    //getSamochody(tb, n);
+    //zapiszDane(tb, n);
+    cout << czytajDane(tb) << endl;
+    //drukujSamochody(tb, n);
 
 	return 0;
 }
