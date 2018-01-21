@@ -1,51 +1,6 @@
-/*
- * ulamek.cpp
- * 
- * Copyright 2018  <>
- * 
- */
-
-
 #include <iostream>
 
 using namespace std;
-
-class Ulamek {
-private:
-    int licznik; // Deklaracja składowej właściwości
-    int mianownik;
-public:
-    Ulamek(int, int); // Deklaracja konstruktora
-    void zapisz(int, int); // Deklaracja metody
-    void wypisz(){
-        cout << licznik << "/" << mianownik;
-    }
-    int get_l() { return licznik; }
-    int get_m() { return mianownik; }
-    void skracaj(); // Metoda drukuje skróconą postać ułamka
-};
-
-void Ulamek::skracaj(){
-    ; //TODO - wykorzystaj algorytm Euklidesa optymalny
-}
-
-void Ulamek::zapisz(int l, int m){
-    licznik = l;
-    if (m != 0) mianownik = m;
-    else {
-        cout << "Mianownik nie może być zerem!" << endl;
-        exit(1);
-    }
-}
-
-Ulamek::Ulamek(int l, int m){
-    licznik = l;
-    if (m != 0) mianownik = m;
-    else {
-        cout << "Mianownik nie może być zerem!" << endl;
-        exit(1);
-    }
-}
 
 int main(int argc, char **argv)
 {
