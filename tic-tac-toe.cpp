@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip> // setw()
-//#include <cstdlib> //srand(), rand()
+#include <cstdlib> //srand(), rand()
 
 using namespace std;
 		
@@ -83,9 +83,18 @@ void draw(char **tab, int w, int k){
     cout << endl;
 }
 
+void description(){
+	cout << "Instrukcja" << endl;
+	//~ TODO
+	cout << "Naciśnij ENTER aby kontynuować" << endl;
+	getchar();
+	getchar();
+}
+
 int main(int argc, char **argv)
 {
 	bool player = false;
+	char choose;
     int w, k, i;
     k = w = 4;
     char **tab;
@@ -106,19 +115,43 @@ int main(int argc, char **argv)
         }
     }
 
-    makeBoard(tab, w, k);
-    draw(tab, w, k);
-    do{
-		if (player){
-			player = false;
-			cout << "Tura O" << endl;
-		} else {
-			player = true;
-			cout << "Tura X" << endl;
+	while(true){
+		system("clear");
+		cout << "|-----------------------------------|" << endl;
+		cout << "|           Tic-Tac-Toe             |" << endl;
+		cout << "|-----------------------------------|" << endl;
+		cout << "|           Menu glowne             |" << endl;
+		cout << "|[1] Graj.                          |" << endl;
+		//cout << "|[2] Instrukcja.                    |" << endl;
+		cout << "|[0] Wyjdz.                         |" << endl;
+		cout << "|-----------------------------------|" << endl;
+		choose=getchar();
+		switch(choose){
+			case '1':
+				makeBoard(tab, w, k);
+				draw(tab, w, k);
+				do{
+					if (player){
+						player = false;
+						cout << "Tura O" << endl;
+					} else {
+						player = true;
+						cout << "Tura X" << endl;
+					}
+					round(tab, w, k, player);
+					draw(tab, w, k);	
+				}while(check(tab, w, k, player) == 0);
+				break;
+			//~ case '2':
+				//~ description();
+				//~ break;
+			case '0': exit(0);
+			default: 
+				cout << "Nie ma takiej opcji!" << endl << "Naciśnij ENTER aby kontynuować" << endl;
+				getchar(); getchar();
+				break;
 		}
-		round(tab, w, k, player);
-		draw(tab, w, k);	
-    }while(check(tab, w, k, player) == 0);
+	}
 
 	return 0;
 }
