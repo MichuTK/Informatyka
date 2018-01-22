@@ -22,11 +22,20 @@ public:
     }
     int get_l() { return licznik; }
     int get_m() { return mianownik; }
-    void skracaj(); // Metoda drukuje skróconą postać ułamka
+    void skracaj(int, int); // Metoda drukuje skróconą postać ułamka
 };
 
-void Ulamek::skracaj(){
-    ; //TODO - wykorzystaj algorytm Euklidesa optymalny
+void Ulamek::skracaj(int l, int m){
+    int licznik = l;
+    int mianownik = m;
+    while (l != m)
+	{
+	if (l < m)
+	m -= l;
+	else
+	l -= m;
+	}
+	cout << endl << "Ulamek po skróceniu: " << licznik/l << "/" << mianownik/l << endl;
 }
 
 void Ulamek::zapisz(int l, int m){
@@ -49,6 +58,7 @@ Ulamek::Ulamek(int l, int m){
 
 int main(int argc, char **argv)
 {
+	int licznik, mianownik;
 	//~Ulamek u1, u2; // Deklaracja obiektu, czyli instancji klasy
     Ulamek u1(3, 7); // Definicja obiektu
     Ulamek u2(1, 4); // Definicja obiektu
@@ -59,12 +69,20 @@ int main(int argc, char **argv)
     cout << endl << "Ułamek 2: ";
     u2.wypisz();
     
-    u1.zapisz(7, 9);
-    cout << endl << "Licznik: " << u1.get_l() << endl;
-    cout << "Mianownik: " << u1.get_m() << endl;
+    //~ u1.zapisz(7, 9);
+    //~ cout << endl << "Licznik: " << u1.get_l() << endl;
+    //~ cout << "Mianownik: " << u1.get_m() << endl;
     
-    Ulamek u3(u1.get_l(), u1.get_m());
+    cout << endl << "Podaj licznik: ";
+    cin >> licznik;
+    cout << "Podaj mianownik: ";
+    cin >> mianownik;
+    Ulamek u3(licznik, mianownik);
     u3.wypisz();
+    u3.skracaj(licznik, mianownik);
+    
+    //~ Ulamek u3(u1.get_l(), u1.get_m());
+    //~ u3.wypisz();
         
 	return 0;
 }
