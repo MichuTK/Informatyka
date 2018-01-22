@@ -15,29 +15,70 @@ int check(char **tab, int w, int k, bool player){
 	   (tab[1][3] == tab[2][2] && tab[1][3] == tab[3][1] && tab[1][3] != '_')){
 		if(player){
 			cout << "Wygrywa X" << endl;
+			cout << "Naciśnij ENTER aby kontynuować" << endl;
+			getchar(); getchar();
 			return 1;
 		} else {
 			cout << "Wygrywa O" << endl;
+			cout << "Naciśnij ENTER aby kontynuować" << endl;
+			getchar(); getchar();
 			return 1;
 		}
 	} else if(tab[1][1] != '_' && tab[1][2] != '_' && tab[1][3] != '_' &&
 			  tab[2][1] != '_' && tab[2][2] != '_' && tab[2][3] != '_' &&
 			  tab[3][1] != '_' && tab[3][2] != '_' && tab[3][3] != '_'){
 		cout << "Remis!" << endl;
+		getchar(); getchar();
 		return 1;
 	} else return 0; 
 }
 
 void round(char **tab, int w, int k, bool player){
-    int column, line;
+    int column, line, field;
     bool good = false;
     srand(time(NULL));
     do{
 		if(player){
-			cout << "Podaj kolumnę: ";
-			cin >> column;
-			cout << "Podaj wiersz: ";
-			cin >> line;
+			cout << "Pole: ";
+			cin >> field;
+			switch(field){
+				case 1: 
+					line = 3;
+					column = 1;
+					break;
+				case 2: 
+					line = 3;
+					column = 2;
+					break;
+				case 3: 
+					line = 3;
+					column = 3;
+					break;
+				case 4: 
+					line = 2;
+					column = 1;
+					break;
+				case 5: 
+					line = 2;
+					column = 2;
+					break;
+				case 6: 
+					line = 2;
+					column = 3;
+					break;
+				case 7: 
+					line = 1;
+					column = 1;
+					break;
+				case 8: 
+					line = 1;
+					column = 2;
+					break;
+				case 9: 
+					line = 1;
+					column = 3;
+					break;
+			}
 		} else {
 			line = (rand() % 3) + 1;			
 			column = (rand() % 3) + 1;			
@@ -87,8 +128,7 @@ void description(){
 	cout << "Instrukcja" << endl;
 	//~ TODO
 	cout << "Naciśnij ENTER aby kontynuować" << endl;
-	getchar();
-	getchar();
+	getchar(); getchar();
 }
 
 int main(int argc, char **argv)
