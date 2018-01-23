@@ -1,3 +1,5 @@
+#ifndef ULAMEK_H
+#define ULAMEK_H
 /*
  * Plik nagłówkowy klasy Ulamek 
  * 
@@ -15,3 +17,4 @@ public:
     int get_m();
     void skracaj(); // Metoda drukuje skróconą postać ułamka
 };
+#endif

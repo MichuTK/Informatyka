@@ -30,10 +30,10 @@ void Ulamek::skracaj(int l, int m){
     int mianownik = m;
     while (l != m)
 	{
-	if (l < m)
-	m -= l;
-	else
-	l -= m;
+        if (l < m)
+        m -= l;
+        else
+        l -= m;
 	}
 	cout << endl << "Ulamek po skróceniu: " << licznik/l << "/" << mianownik/l << endl;
 }

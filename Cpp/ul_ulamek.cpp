@@ -34,5 +34,14 @@ int Ulamek::get_m() {
 }
 
 void Ulamek::skracaj(){
-    ; //TODO - wykorzystaj algorytm Euklidesa optymalny
+    /*int licznik = l;
+    int mianownik = m;
+    while (l != m)
+	{
+        if (l < m)
+        m -= l;
+        else
+        l -= m;
+	}
+	cout << endl << "Ulamek po skróceniu: " << licznik/l << "/" << mianownik/l << endl;*/
 }
