@@ -1,0 +1,17 @@
+KLASA SAMOCHÓD
+marka
+model
+pojemność silnika
+pojemność baku
+set_spalanie()
+get_spalanie()
+zatankuj(20)
+jedz(100)
+
+KLASA UCZEN
+imie
+nazwisko
+klasa
+oceny
+srednia()
+ustaw_klase("1A")
