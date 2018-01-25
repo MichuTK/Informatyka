@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-25T12:01:00+01:00
+
+====== Struktury danych ======
+Created czwartek 25 styczeń 2018
+
+**Podstawowe sruktury danych:**
+- stos
+- kolejka
+- lista
+- drzewo
+
+**Stos** jest strukturą **liniowo uporządkowanych danych**, z których jedynie ostatni element (wierzchołek) jest w danym momencie dostępny.
+
+**push()** - dodaje element na szczycie stosu
+**pop()** - usuwa element będący wierzchołkiem
+**size()** - rozmiar elementów stosu
+**empty()** - zwraca true jeżeli stos jest pusty
+
+**Kolejka** - (przeciwienstwo stosu) **liniowa struktura danych**, w której element, który został wstawwiony do kolejki jako pierwszy, jako pierwszy jest z niej pobierany.
+
+**Głowa** //(head) //- pierwszy element.
+**Ogon** //(tail)// - pierwsze wolne miejsce.
+
+**Lista - liniowa struktura danych** służąca do przechowywania nieznanej z góry iloścu informacji tego samego typu.
+
+**Drzewo binarne** - jest **hierarchiczną strukturą danych**, którego elementy nazwya się węzłami //(node)// lub wierzchołkami.
+
