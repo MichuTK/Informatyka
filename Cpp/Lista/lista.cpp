@@ -55,5 +55,29 @@ bool Lista::Usun(){
 }
 
 void Lista::Wstaw(int pozycja, int wartosc){
-    ; // co dalej?
+    if (pozycja < 0)    pozycja *= (-1);	// wartosc bezwzgledna
+    if(pozycja != 0){
+        if(pozycja > i){
+        Dodaj(wartosc);				// definicja powiekdzenia listy
+        } else if (pozycja == 1) {		// zmiana na head
+            ELEMENT *el = new ELEMENT;
+            el -> wartosc = wartosc;
+            el -> wskaznik = head;
+            head = el;
+            i++;
+        } else {
+            ELEMENT *el = new ELEMENT;
+            el -> wartosc = wartosc;	// przypisanie nowej wartosci
+            
+            ELEMENT *p = head;		// wskaznik pomocniczy
+
+            for (int j = 1; j != pozycja - 1; j++)
+                p = p -> wskaznik;	// dotarcie do poprzedniej pozycji
+
+            el -> wskaznik = p -> wskaznik;
+            p -> wskaznik = el;
+            
+            i++;
+        }
+    }
 }

@@ -16,6 +16,7 @@ class Lista{
         // memory leaks - wycieki pamięci
         void Dodaj(int);
         void Wyswietl();
+        void Wstaw(int, int);
         bool Usun();
         
 };
