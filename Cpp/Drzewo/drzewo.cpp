@@ -1,17 +1,15 @@
 #include <iostream>
 #include "drzewo.hpp"
 
-//~Drzewo::Drzewo(){
-    //~lewy = NULL;
-    //~prawy = NULL;
-//~}
+Drzewo::Drzewo(){
+    korzen = NULL;
+}
 
 //~Drzewo::~Drzewo(){
     //~while(Usun()){;}
 //~}
 
 Wezel* stworzWezel(int wartosc) {
-    
     Wezel *nowyWezel = new Wezel;
     nowyWezel->wartosc = wartosc;
     nowyWezel->lewy = NULL;
@@ -20,17 +18,17 @@ Wezel* stworzWezel(int wartosc) {
     return nowyWezel;
 }
 
-void Drzewo::DodajWezel(Wezel *wezel, int wartosc) {
+void Drzewo::DodajWezel(int korzen, int wartosc) {
     if (korzen == NULL) { // drzewo jest puste!
         korzen = stworzWezel(wartosc); // utworzenie 1. elementu
     } else {
-        if (wartosc < wezel->wartosc) { // wstawiamy wartość mniejszą
+        if (wartosc < wezel->wartosc) { // wstawiamy wartość do lewego poddrzewa
             if(wezel->lewy != NULL) {
                 dodajWezel(wezel->lewy, wartosc);  // rekurencyjne wywołanie dodawanie do lewego poddrzewa
             } else {  // lewy potomek nie istnieje
                 wezel->lewy = stworzWezel(wartosc);  // tworzymy nowy wezel
             }
-        } else { // wstawiamy wartość większą
+        } else { // wstawiamy wartość do prawego poddrzewa
             if(wezel->prawy != NULL) {
                 dodajWezel(wezel->prawy, wartosc);  // rekurencyjne wywołanie dodawanie do lewego poddrzewa
             } else {  // prawy potomek nie istnieje

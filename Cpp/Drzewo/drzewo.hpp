@@ -13,11 +13,10 @@ class Drzewo{
     private: // hermetyzacja danych
         *korzen = NULL; // definicja struktury i utworzenie wskaźnika korzen;
     public: // interfejs publiczny (API klasy)
+        
         Drzewo(); // konstruktor
-        //~Drzewo(); // destruktor, posprzątanie po klasie
-        // memory leaks - wycieki pamięci
-        void DodajWezel(int);
-        void WyswietlRosnaco();
+        void DodajWezel(int, int);
+        //void WyswietlRosnaco();
 };
 
 #endif
