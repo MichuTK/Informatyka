@@ -3,10 +3,10 @@
 #include <cstdlib> //srand(), rand()
 
 using namespace std;
-		
+
 int check(char **tab, int w, int k, bool player){
 	if((tab[1][1] == tab[1][2] && tab[1][1] == tab[1][3] && tab[1][1] != '_') ||
-	   (tab[2][1] == tab[2][2] && tab[2][1] == tab[2][3] && tab[2][1] != '_') || 
+	   (tab[2][1] == tab[2][2] && tab[2][1] == tab[2][3] && tab[2][1] != '_') ||
 	   (tab[3][1] == tab[3][2] && tab[3][1] == tab[3][3] && tab[3][1] != '_') ||
 	   (tab[1][1] == tab[2][1] && tab[1][1] == tab[3][1] && tab[1][1] != '_') ||
 	   (tab[1][2] == tab[2][2] && tab[1][2] == tab[3][2] && tab[1][2] != '_') ||
@@ -30,7 +30,7 @@ int check(char **tab, int w, int k, bool player){
 		cout << "Remis!" << endl;
 		getchar(); getchar();
 		return 1;
-	} else return 0; 
+	} else return 0;
 }
 
 void round(char **tab, int w, int k, bool player){
@@ -42,54 +42,54 @@ void round(char **tab, int w, int k, bool player){
 			cout << "Pole: ";
 			cin >> field;
 			switch(field){
-				case 1: 
+				case 1:
 					line = 3;
 					column = 1;
 					break;
-				case 2: 
+				case 2:
 					line = 3;
 					column = 2;
 					break;
-				case 3: 
+				case 3:
 					line = 3;
 					column = 3;
 					break;
-				case 4: 
+				case 4:
 					line = 2;
 					column = 1;
 					break;
-				case 5: 
+				case 5:
 					line = 2;
 					column = 2;
 					break;
-				case 6: 
+				case 6:
 					line = 2;
 					column = 3;
 					break;
-				case 7: 
+				case 7:
 					line = 1;
 					column = 1;
 					break;
-				case 8: 
+				case 8:
 					line = 1;
 					column = 2;
 					break;
-				case 9: 
+				case 9:
 					line = 1;
 					column = 3;
 					break;
 			}
 		} else {
-			line = (rand() % 3) + 1;			
-			column = (rand() % 3) + 1;			
-		}		
+			line = (rand() % 3) + 1;
+			column = (rand() % 3) + 1;
+		}
 		if(column < 1 || column > 3 || line < 1 || line > 3 || tab[line][column] != '_'){
 			cout << "Spróbuj jeszcze raz!" << endl;
 			good = true;
 		} else { good = false; }
 	}while(good);
-	
-    if(player){        
+
+    if(player){
         tab[line][column] = 'X';
     } else {
         tab[line][column] = 'O';
@@ -104,7 +104,7 @@ void makeBoard(char **tab, int w, int k){
     tab[1][0] = '1';
     tab[2][0] = '2';
     tab[3][0] = '3';
-    
+
     for(int i = 1; i < w; i++){
         for(int j = 1; j < k; j++){
             tab[i][j] = '_';
@@ -113,7 +113,7 @@ void makeBoard(char **tab, int w, int k){
 }
 
 void draw(char **tab, int w, int k){
-    system("clear");
+    system("cls");
     cout << endl;
     for(int i = 0; i < w; i++){
         for(int j = 0; j < k; j++){
@@ -156,7 +156,7 @@ int main(int argc, char **argv)
     }
 
 	while(true){
-		system("clear");
+		system("cls");
 		cout << "|-----------------------------------|" << endl;
 		cout << "|           Tic-Tac-Toe             |" << endl;
 		cout << "|-----------------------------------|" << endl;
@@ -179,14 +179,14 @@ int main(int argc, char **argv)
 						cout << "Tura X" << endl;
 					}
 					round(tab, w, k, player);
-					draw(tab, w, k);	
+					draw(tab, w, k);
 				}while(check(tab, w, k, player) == 0);
 				break;
 			//~ case '2':
 				//~ description();
 				//~ break;
 			case '0': exit(0);
-			default: 
+			default:
 				cout << "Nie ma takiej opcji!" << endl << "Naciśnij ENTER aby kontynuować" << endl;
 				getchar(); getchar();
 				break;
