@@ -7,18 +7,26 @@ import rg
 class Robot:
     # typy pól: 'spawn', 'normal', 'obstacle', 'invalid'
     # rg.loc_types() - zwaraca typ pola
+        # return ['guard']
+        # return ['suicide']
+        # return ['move', ()]
+        # return ['attack']
     def act(self, game):
         # funkcja zwróci prawdę, jeżeli "poz" wskazuje punkt wejścia
         def czy_wejscie(poz):
             if 'spawn' in rg.loc_types(poz):
                 return True
             return False
-        # return ['guard']
-        # return ['suicide']
-        # return ['move', ()]
-        # return ['attack']
-        # ilu_wrogow = 0
         lista_wrogow_obok = []
+
+        # funkcja zwróci prawdę, jeżeli w odległości 2 kroków z przodu jest wróg
+        def zprzodu(l1, l2):
+            if rg.wdist(l1, l2) == 2:
+                if abs(l1[0] - l2[0]) == 1:
+                    return False
+                else:
+                    return True
+            return False
 
         # jeżeli obok są przeciwnicy, atakuj
         # wersja z pętlą przeglądającą wszystkie pola zajęte przez roboty
@@ -39,11 +47,13 @@ class Robot:
         elif len(lista_wrogow_obok):
             return ['attack', lista_wrogow_obok[0]]
 
-        # jeżeli jesteś w środku, broń się
-        if self.location == rg.CENTER_POINT:
-            return ['guard']
-
         # idź do środka planszy, ruch domyślny
-        if czy_wejscie(self.poz):
+        dystansCP = rg.wdist(self.location, rg.CENTER_POINT)
+        # if czy_wejscie(self.poz):
+        if dystansCP > 6:
             return ['move', rg.toward(self.location, rg.CENTER_POINT)]
 
+        # if self.location == rg.CENTER_POINT:
+        #     return ['guard']
+
+        return ['guard']
